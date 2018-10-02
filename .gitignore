@@ -1,0 +1,18 @@
+cd
+mkdir -p bloc/the_pantry
+cd bloc/the_pantry
+pwd
+git init .
+git remote add origin git@github.com:rosiechu11/the_pantry.git
+git remote -v
+cat .git/config
+echo "# the_pantry" >> README.md
+git add README.me
+git commit -m "first commit"
+git push origin master
+git checkout mater
+git checkout -b my_new_branch
+touch my_new_branch_file.txt
+git add my_new_branch_file.txt
+git commit -m "Add a new file" 
+git push origin my_new_branch
