@@ -23,6 +23,11 @@ git checkout -b new_grocery_list
 echo "I'm in new_grocery_list" > orange.txt
 git add orange.txt
 git commit -m "Merge conflict"
+git checkout master
+touch orange.txt
+echo "I'm in master" > orange.txt
+git add orange.txt
+git commit -m "Merge conflict"
 git merge new_grocery_list
 notepad orange.txt
 git add orange.txt
