@@ -46,6 +46,23 @@ git push origin master
 git checkout master
 git checkout -b the_pantry_assignment
 touch the_pantry_assignment.txt
-git add my_new_branch_file.txt
+git add my_pantry_assignment.txt
 git commit -m "Add a new file"
 git push origin the_pantry_assignment
+git checkout master
+git branch -D my_pantry_assignment
+git push origin --delete my_pantry_assignment
+git checkout -b my_pantry_assignment
+echo "I'm in my_pantry_assignment" > orange.txt
+git add orange.txt
+git commit -m "Merge conflict" 
+git checkout master
+touch orange.txt
+echo "I'm in master" > orange.txt
+git add orange.txt
+git commit -m "Merge conflict"
+git merge my_pantry_assignment
+notepad orange.txt
+git commit -m "Fix merge conflict"
+git push origin master
+git push origin my_pantry_assignment:my_pantry_assignment
